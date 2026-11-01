@@ -65,5 +65,23 @@ SQLite is used to store application data.
 ## Project Purpose
 The main aim is to provide users with an easy way to discover holy places and organize their spiritual visits.
 
+## Website Screenshots
+
+![Home Page](screenshots/Screenshot%202026-11-01%20133816.png)
+
+![Introduction](screenshots/Screenshot%202026-11-01%20133837.png)
+
+![Explore Places](screenshots/Screenshot%202026-11-01%20133903.png)
+
+![Holy Places Collection](screenshots/Screenshot%202026-11-01%20133931.png)
+
+![More Places](screenshots/Screenshot%202026-11-01%20133946.png)
+
+![Our Story](screenshots/Screenshot%202026-11-01%20134010.png)
+
+![About Finding Joy](screenshots/Screenshot%202026-11-01%20134023.png)
+
+![Plan a Visit](screenshots/Screenshot%202026-11-01%20134037.png)
+
 ---
 **Finding Joy Through Holy Places – Explore, Discover and Plan.**
