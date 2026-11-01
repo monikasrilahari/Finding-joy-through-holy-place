@@ -1,1 +1,67 @@
-Frontend files are stored here.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover India's sacred destinations, cultures and stories with Finding Joy Through Holy Places.">
+  <title>Finding Joy — Sacred Places of India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="announcement">✦  A JOURNEY THROUGH FAITH, CULTURE & INNER PEACE  ✦</div>
+  <header class="site-header">
+    <a class="brand" href="#home"><span class="brand-mark">✺</span><span>finding<span class="brand-light">joy</span><small>HOLY PLACES OF INDIA</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+    <nav id="mainNav"><a href="#home">Home</a><a href="#explore">Explore places</a><a href="#journey">Our story</a><a href="#plan">Plan a visit</a></nav>
+    <a class="header-cta" href="#explore">Begin exploring <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span></span> INDIA • A LAND OF MANY FAITHS</div>
+        <h1>Some journeys<br>take you <em>closer</em><br>to yourself.</h1>
+        <p>Discover sacred places, timeless stories and the beautiful traditions that bring people together.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#explore">Explore sacred places <span>→</span></a><a class="text-btn" href="#journey">Our purpose <span>↗</span></a></div>
+        <div class="hero-note"><span class="note-line"></span><span>20+ destinations · 5 faith traditions · One incredible India</span></div>
+      </div>
+      <div class="hero-side-caption">A LITTLE MORE WONDER. A LITTLE MORE PEACE.</div>
+      <div class="hero-scroll">SCROLL TO DISCOVER <span>↓</span></div>
+    </section>
+
+    <section class="intro section-wrap">
+      <div class="section-kicker">A WORLD OF WONDER</div>
+      <div class="intro-grid"><h2>Every sacred place<br>has a story worth <em>feeling.</em></h2><p>From the bells of ancient temples to the calm of a monastery, India's spiritual landmarks invite us to pause, connect and see the world differently. Find a place that speaks to you.</p></div>
+      <div class="stat-row"><div><strong>20<span>+</span></strong><small>PLACES TO DISCOVER</small></div><div><strong>05</strong><small>FAITH TRADITIONS</small></div><div><strong>01</strong><small>SHARED JOURNEY</small></div><div class="stat-quote">“Peace begins with a<br>moment of wonder.”</div></div>
+    </section>
+
+    <section class="explore-section" id="explore">
+      <div class="section-wrap">
+        <div class="explore-heading"><div><div class="section-kicker">THE DESTINATION COLLECTION</div><h2>Find your <em>sanctuary.</em></h2></div><span class="collection-count">LIVE DESTINATIONS FROM DATABASE <b>✳</b></span></div>
+        <div class="toolbar"><div class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search a place, city or state..." aria-label="Search places"></div><div class="filters" id="filters"><button class="filter active" data-filter="All">All places <span>20</span></button><button class="filter" data-filter="Temple">Temples</button><button class="filter" data-filter="Mosque">Mosques</button><button class="filter" data-filter="Church">Churches</button><button class="filter" data-filter="Gurudwara">Gurudwaras</button><button class="filter" data-filter="Buddhist">Buddhist</button></div></div>
+        <div class="results-line"><span id="resultCount">20 places to discover</span><span>SELECT A PLACE TO KNOW MORE ↗</span></div>
+        <div class="place-grid" id="placeGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>No places found. Try another search.</div>
+      </div>
+    </section>
+
+    <section class="quote-banner">
+      <div class="quote-overlay"></div><div class="quote-content"><span class="quote-symbol">“</span><h2>Different paths.<br><em>One feeling</em> of peace.</h2><p>Respect every faith. Celebrate every story.</p></div>
+    </section>
+
+    <section class="story-section section-wrap" id="journey">
+      <div class="story-image"><img src="/static/images/meenakshi-amman-temple.jpg" alt="Meenakshi Amman Temple" onerror="this.onerror=null;this.src='/static/images/meenakshi-amman-temple.svg'"><span class="image-stamp">DISCOVER<br>WITH RESPECT</span></div>
+      <div class="story-copy"><div class="section-kicker">WHY FINDING JOY?</div><h2>More than places.<br>It's about the <em>feeling.</em></h2><p>Finding Joy Through Holy Places is a digital guide to India's diverse spiritual heritage. We bring together destinations from different faiths in one welcoming space, helping visitors discover their history, significance and location.</p><p>Whether you are planning a visit or simply exploring from home, let curiosity lead the way.</p><a class="under-link" href="#plan">Make your journey meaningful <span>→</span></a></div>
+    </section>
+
+    <section class="plan-section" id="plan"><div class="section-wrap plan-grid"><div><div class="section-kicker">YOUR NEXT CHAPTER</div><h2>Where will your<br>journey <em>begin?</em></h2><p>Save a place that inspires you, then start planning your visit. Every journey begins with one small step.</p></div><form id="visitForm" class="visit-form"><label for="visitorName">YOUR NAME</label><input id="visitorName" type="text" placeholder="Enter your name" required><label for="chosenPlace">PLACE YOU'D LOVE TO VISIT</label><select id="chosenPlace" required><option value="">Choose a destination</option></select><label for="visitNote">A LITTLE NOTE (OPTIONAL)</label><textarea id="visitNote" rows="3" placeholder="What makes this place special to you?"></textarea><button class="primary-btn" type="submit">Save my travel thought <span>→</span></button><p class="form-message" id="formMessage" aria-live="polite"></p></form></div></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">✺</span><span>finding<span class="brand-light">joy</span><small>HOLY PLACES OF INDIA</small></span></a><p>Created with curiosity, respect & a love for discovery.</p><div class="footer-bottom"><span>© 2026 FINDING JOY THROUGH HOLY PLACES</span><a href="/admin">ADMIN DASHBOARD ↗</a><a href="#home">BACK TO TOP ↑</a></div></footer>
+
+  <div class="modal" id="placeModal" aria-hidden="true"><div class="modal-backdrop" id="modalBackdrop"></div><article class="modal-card"><button class="modal-close" id="modalClose" aria-label="Close">×</button><img id="modalImage" src="" alt=""><div class="modal-body"><span class="modal-category" id="modalCategory"></span><h2 id="modalTitle"></h2><p class="modal-location" id="modalLocation"></p><p id="modalDescription"></p><div class="modal-facts"><div><small>TRADITION</small><b id="modalFaith"></b></div><div><small>LOCATION</small><b id="modalState"></b></div></div><div class="modal-actions"><button class="primary-btn" id="savePlace">♡ Save this place</button><a class="under-link" id="mapLink" href="#" target="_blank" rel="noopener">View on map ↗</a></div></div></article></div>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body></html>
